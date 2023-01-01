@@ -44,7 +44,7 @@
   <div id="message-div">
     <h3>Info</h3>
     <p>Following form logs out currently logged in user from vuln server.</p>
-    <form method="POST" action="/index.php">
+    <form method="POST" action="http://localhost:8080/index.php">
       <input class="text" id="logout" name="logout" type="hidden" value="true"/>
       <input class="button" id="logout" type="submit" value="Logout CSRF"/>
     </form>

@@ -153,7 +153,7 @@ main();
   <div id="loggedin-div">
     <h3>Info</h3>
     <pre>Welcome back, <?= $USER_NAME ?></pre>
-    <form method="POST" action="http://localhost:8080/index.php">
+    <form method="POST" action="/index.php">
       <input class="text" id="logout" name="logout" type="hidden" value="true"/>
       <input class="button" id="logout" type="submit" value="Logout"/>
     </form>
