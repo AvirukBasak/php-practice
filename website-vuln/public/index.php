@@ -121,7 +121,7 @@ main();
       width: 80px;
       height: 30px;
     }
-    input.button:hover, input.button:active {
+    input.button:active {
       background-color: #dedede;
     }
   </style>
@@ -137,7 +137,8 @@ main();
       <input class="text" id="passwd" name="passwd" type="password" placeholder="Enter password"/></br>
       <label for="conf-passwd">Confirm:&nbsp;</label>
       <input class="text" id="conf-passwd" name="conf-passwd" type="password" placeholder="Confirm password"/></br>
-      <input class="button" id="submit" type="submit" value="Submit"/>
+      <input class="button" id="submit" type="submit" value="Submit"/>&nbsp;
+      <input class="button" id="reset" type="reset" value="Clear"/>
     </form>
   </div>
 <?php } else if ($MESSAGE) { ?>
