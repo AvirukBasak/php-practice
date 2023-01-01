@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-  <title>Vuln</title>
+  <title>Not Found - Vuln</title>
   <style>
     * {
       font-family: monospace;
