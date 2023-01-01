@@ -32,7 +32,7 @@
       outline: none;
     }
     input.button, button {
-      width: 80px;
+      min-width: 80px;
       height: 30px;
     }
     input.button:hover, input.button:active {
@@ -43,7 +43,7 @@
 <body>
   <div id="message-div">
     <h3>Info</h3>
-    <pre>Following form logs out currently logged in user from vuln server.</pre>
+    <p>Following form logs out currently logged in user from vuln server.</p>
     <form method="POST" action="/index.php">
       <input class="text" id="logout" name="logout" type="hidden" value="true"/>
       <input class="button" id="logout" type="submit" value="Logout CSRF"/>

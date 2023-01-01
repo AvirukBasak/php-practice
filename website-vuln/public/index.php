@@ -118,7 +118,7 @@ main();
       outline: none;
     }
     input.button, button {
-      width: 80px;
+      min-width: 80px;
       height: 30px;
     }
     input.button:active {
