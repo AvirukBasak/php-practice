@@ -1,6 +1,6 @@
 #!/bin/bash
 if ! ( which php > /dev/null ); then
-    echo 'error: php no installed'
+    echo 'error: php not installed'
     exit 1
 fi
 
