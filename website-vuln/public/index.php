@@ -92,24 +92,31 @@ main();
   <title>Vuln</title>
   <style>
     * {
+      --light-bgcolor: #f5ffec;
+      --div-bgcolor: #e0ecd3; 
+      --active-bgcolor: #eaf3e9;
+      --accent-color: #478d00;
+      --border-color: #c5d6c7;
       font-family: monospace;
       font-size: 98%;
     }
     html, body {
       margin: 0;
+      background-color: var(--light-bgcolor);
     }
     div {
       padding: 25px;
       margin: 50px auto 20px;
       width: 320px;
-      border: 1px solid #aaaaaa;
+      border: 1px solid var(--border-color);
       border-radius: 10px;
-      background-color: #dedede;
+      background-color: var(--div-bgcolor);
     }
     input {
-      border: 1px solid #aaaaaa;
+      border: 1px solid var(--border-color);
       border-radius: 10px;
       padding: 1px 7px 1px;
+      background-color: var(--light-bgcolor);
     }
     input.text {
       width: 220px;
@@ -120,17 +127,18 @@ main();
     input.button, button {
       min-width: 80px;
       height: 30px;
+      color: var(--accent-color);
     }
     input.button:active {
-      background-color: #dedede;
+      background-color: var(--active-bgcolor);
     }
   </style>
 </head>
 <body>
 <?php if (!$LOGGED_IN && !$MESSAGE) { ?>
   <div id="login-div">
-    <h3>Enter login details</h3>
-    <form method="POST" action="/index.php">
+    <h3 style="color: var(--accent-color);">Enter login details</h3>
+    <form method="POST" action="/">
       <label for="uname">Username:</label>
       <input class="text" id="uname" name="uname" type="text" placeholder="Enter username"/></br>
       <label for="passwd">Password:</label>
@@ -143,7 +151,7 @@ main();
   </div>
 <?php } else if ($MESSAGE) { ?>
   <div id="message-div">
-    <h3>Info</h3>
+    <h3 style="color: var(--accent-color);">Info</h3>
     <pre><?= $MESSAGE ?></pre>
     <form method="GET" action="/">
       <input class="button" id="reload" type="submit" value="Reload"/>
@@ -151,9 +159,9 @@ main();
   </div>
 <?php } else { ?>
   <div id="loggedin-div">
-    <h3>Info</h3>
+    <h3 style="color: var(--accent-color);">Info</h3>
     <pre>Welcome back, <?= $USER_NAME ?></pre>
-    <form method="POST" action="/index.php">
+    <form method="POST" action="/">
       <input class="text" id="logout" name="logout" type="hidden" value="true"/>
       <input class="button" id="logout" type="submit" value="Logout"/>
     </form>

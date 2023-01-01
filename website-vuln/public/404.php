@@ -5,24 +5,31 @@
   <title>Not Found - Vuln</title>
   <style>
     * {
+      --light-bgcolor: #f5ffec;
+      --div-bgcolor: #e0ecd3; 
+      --active-bgcolor: #eaf3e9;
+      --accent-color: #478d00;
+      --border-color: #c5d6c7;
       font-family: monospace;
       font-size: 98%;
     }
     html, body {
       margin: 0;
+      background-color: var(--light-bgcolor);
     }
     div {
       padding: 25px;
       margin: 50px auto 20px;
       width: 320px;
-      border: 1px solid #aaaaaa;
+      border: 1px solid var(--border-color);
       border-radius: 10px;
-      background-color: #dedede;
+      background-color: var(--div-bgcolor);
     }
     input {
-      border: 1px solid #aaaaaa;
+      border: 1px solid var(--border-color);
       border-radius: 10px;
       padding: 1px 7px 1px;
+      background-color: var(--light-bgcolor);
     }
     input.text {
       width: 220px;
@@ -31,17 +38,18 @@
       outline: none;
     }
     input.button, button {
-      width: 80px;
+      min-width: 80px;
       height: 30px;
+      color: var(--accent-color);
     }
-    input.button:hover, input.button:active {
-      background-color: #dedede;
+    input.button:active {
+      background-color: var(--active-bgcolor);
     }
   </style>
 </head>
 <body>
   <div id="message-div">
-    <h3>404/h3>
+    <h3>404</h3>
     <pre>Not Found</pre>
     <form method="GET" action="/">
       <input class="button" id="reload" type="submit" value="Reload"/>
