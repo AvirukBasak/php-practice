@@ -13,6 +13,7 @@ function set_data($key, $data) {
     if (file_exists("../data/$key")) return false;
     $file = fopen("../data/$key", 'wb');
     fwrite($file, $data);
+    fclose($file);
     return true;
 }
 
@@ -21,6 +22,7 @@ function get_data($key) {
     if (!file_exists("../data/$key")) return false;
     $file = fopen("../data/$key", "rb");
     return fread($file, filesize("../data/$key"));
+    fclose($file);
 }
 
 function get_user($uid) {
