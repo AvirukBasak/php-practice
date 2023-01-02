@@ -3,7 +3,5 @@ Repo to experiment on PHP and CSRF attacks
 
 ## Usage
 Run with `start.sh`
-```
-default vuln server localhost:8080
-default evil server localhost:42069
-```
+- vuln server [http://localhost:8080](http://localhost:8080)
+- evil server [http://localhost:42069](http://localhost:42069)
