@@ -20,7 +20,7 @@
     div {
       padding: 25px;
       margin: 50px auto 20px;
-      width: 320px;
+      width: 290px;
       border: 1px solid var(--border-color);
       border-radius: 10px;
       background-color: var(--div-bgcolor);

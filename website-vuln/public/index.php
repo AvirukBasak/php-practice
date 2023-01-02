@@ -109,7 +109,7 @@ main();
     div {
       padding: 25px;
       margin: 50px auto 20px;
-      width: 320px;
+      width: 290px;
       border: 1px solid var(--border-color);
       border-radius: 10px;
       background-color: var(--div-bgcolor);
@@ -121,7 +121,7 @@ main();
       background-color: var(--light-bgcolor);
     }
     input.text {
-      width: 220px;
+      width: 200px;
       height: 25px;
       margin-bottom: 10px;
       outline: none;
