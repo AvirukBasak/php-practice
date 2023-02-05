@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(E_ALL | E_STRICT);
+ini_set('display_errors', 1);
+
 $RESPONSE = false;
 
 $from = false;
@@ -54,6 +57,7 @@ function evaluate_params()
         'From' => "$from<$email>",
         'X-Mailer' => 'PHP/' . phpversion()
     );
+    ini_set('sendmail_from', $from);
     if (mail($to, $subject, $message, $headers)) {
         $GLOBALS['RESPONSE'] = 'Your e-mail was sent';
     } else {
@@ -62,5 +66,8 @@ function evaluate_params()
 }
 
 if (!empty($_POST)) evaluate_params();
+
+ini_set('sendmail_from', 'www@example.com');
+ini_set('sendmail_path', '/usr/sbin/sendmail -t -i -f "www@example.com"');
 
 include_once 'form.php';
